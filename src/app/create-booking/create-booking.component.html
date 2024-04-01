@@ -1,0 +1,24 @@
+
+<div class="container w-50 m-auto shadow p-2">
+    <form #createBookingForm="ngForm" (ngSubmit)="saveBooking()">
+        <p class="text-center fs-5 fw-bold text-decoration-underline">Create Booking</p>
+        <div class="mb-3">
+            <label for="id3" class="form-label">Name</label>
+            <input type="text" class="form-control" id="id3" name="b_name" [(ngModel)]="bookingObj.name">
+        </div>
+        <div class="mb-3">
+            <label for="id1" class="form-label">Source</label>
+            <input type="text" class="form-control" id="id1"name="b_source" [(ngModel)]="bookingObj.source">
+        </div>
+        <div class="mb-3">
+            <label for="id2" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="id2" name="b_destination" [(ngModel)]="bookingObj.destination">
+        </div>
+        <div class="mb-3">
+            <label for="id4" class="form-label">Date</label>
+            <input type="date" class="form-control" id="id4" name="b_date" [(ngModel)]="bookingObj.date">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary mx-1" routerLink="/booking-list">Back</button>
+    </form>
+</div>
